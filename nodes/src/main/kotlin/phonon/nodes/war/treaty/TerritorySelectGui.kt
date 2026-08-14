@@ -33,7 +33,7 @@ val ICON_BACK = itemIcon(
 
 val ICON_TERRITORY = ItemStack(Material.GRASS_BLOCK, 1)
 
-val ICON_OCCUPIED = ItemStack(Material.PODZOL, 1) // podzol
+val ICON_OCCUPIED = ItemStack(Material.DIRT, 1, 2.toShort()) // podzol
 
 // render a territory button with territory info and callback on press
 public fun territoryButton(

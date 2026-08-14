@@ -47,7 +47,7 @@ val ICON_EMPTY = ItemStack(Material.AIR, 1)
 
 // icon for letting other party occupy your territory
 val ICON_OCCUPY = itemIcon(
-    ItemStack(Material.DIRT, 1, 2.toShort()),
+    ItemStack(Material.PODZOL, 1),
     "${ChatColor.RED}${ChatColor.BOLD}Territory Occupation",
     listOf(
         "${ChatColor.WHITE}Give territories for occupation, or transfer occupied territories",
@@ -132,7 +132,7 @@ public fun renderTreatyTermOccupation(screen: GuiWindow, x: Int, y: Int, treaty:
         GuiButton(
             x,
             y,
-            ItemStack(Material.DIRT, 1, 2.toShort()),
+            ItemStack(Material.PODZOL, 1),
             title,
             propertiesList + resourcesList,
             { treaty.remove(term) },
@@ -141,7 +141,7 @@ public fun renderTreatyTermOccupation(screen: GuiWindow, x: Int, y: Int, treaty:
         GuiLabel(
             x,
             y,
-            ItemStack(Material.DIRT, 1, 2.toShort()),
+            ItemStack(Material.PODZOL, 1),
             title,
             propertiesList + resourcesList,
         ).render(screen)
@@ -176,7 +176,7 @@ public fun renderTreatyTermRelease(screen: GuiWindow, x: Int, y: Int, treaty: Tr
         GuiButton(
             x,
             y,
-            ItemStack(Material.DIRT, 1, 2.toShort()),
+            ItemStack(Material.PODZOL, 1),
             title,
             propertiesList + resourcesList,
             { treaty.remove(term) },
@@ -185,7 +185,7 @@ public fun renderTreatyTermRelease(screen: GuiWindow, x: Int, y: Int, treaty: Tr
         GuiLabel(
             x,
             y,
-            ItemStack(Material.DIRT, 1, 2.toShort()),
+            ItemStack(Material.PODZOL, 1),
             title,
             propertiesList + resourcesList,
         ).render(screen)

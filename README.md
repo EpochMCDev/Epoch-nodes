@@ -24,7 +24,7 @@ This repository contains the following separate projects:
 
 ## 1. Building main server plugin
 Requirements:
-- Java JDK 21 (current plugin target java version)
+- Java JDK 25 (current plugin target java version)
 
 Go inside `nodes/` and run
 ```

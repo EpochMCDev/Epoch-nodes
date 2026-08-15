@@ -8,6 +8,9 @@
 **文档:** <https://github.com/d-z4/minecraft-nodes/wiki>   
 **编辑器:** <https://editor.nodes.soy/earth.html>  
 
+> 📖 **三项目使用教程**:nodes 主插件 + nodes-squaremap 附属 + squaremap 编辑器
+> 的安装/构建/部署/使用完整教程,见 **[使用教程.md](./使用教程.md)**。
+
 
 
 # 仓库结构

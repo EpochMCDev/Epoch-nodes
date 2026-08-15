@@ -1,0 +1,9 @@
+name: nodes-squaremap
+version: 0.0.1
+main: phonon.nodes.squaremap.NodesSquaremapPlugin
+api-version: 26.2
+depend: [squaremap]
+softdepend: [nodes]
+authors: [phonon]
+description: Render nodes territories, nodes, and ports on squaremap.
+website: https://github.com/d-z4/minecraft-nodes

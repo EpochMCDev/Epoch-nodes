@@ -1,1 +1,4 @@
 .vscode
+/.idea/
+/nodes-squaremap/.gradle/
+/nodes-squaremap/build/

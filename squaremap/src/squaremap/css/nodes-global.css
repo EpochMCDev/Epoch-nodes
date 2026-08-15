@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+/* squaremap leaflet map container */
+#map {
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+/* nodes editor sidebar */
+#nodes-container {
+    height: 100%;
+    width: 400px;
+    min-width: 400px;
+    overflow-y: auto;
+    z-index: 10;
+    background: #181818;
+}
+
+/* port tooltip layer overlays the map, positioned by client coords */
+#port-tooltip-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* svg overlay pane above map tiles */
+.leaflet-nodes-pane {
+    z-index: 500;
+}
+
+#nodes-world {
+    z-index: 500;
+}

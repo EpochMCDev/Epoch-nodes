@@ -11,7 +11,9 @@ Map painting but in block game. Contains server plugin and nodes dynmap viewer/e
 ```
 minecraft-nodes/
  ├─ nodes/                - Main nodes plugin
- └─ dynmap/               - Dynmap editor/viewer
+ ├─ dynmap/               - Dynmap editor/viewer
+ ├─ nodes-squaremap/      - squaremap addon (renders nodes on squaremap)
+ └─ squaremap/            - squaremap editor/viewer (port of the dynmap editor)
 ```
 
 
@@ -20,6 +22,8 @@ minecraft-nodes/
 This repository contains the following separate projects:
 1.  Nodes main server plugin
 2.  Dynmap viewer/editor
+3.  Nodes squaremap addon
+4.  Squaremap viewer/editor
 
 
 ## 1. Building main server plugin
@@ -40,6 +44,37 @@ Built `nodes-VERSION.jar` will appear in `build/libs/`.
 Requirements:
 - node.js
 - Rust
+
+-----------------------------------------------------------
+
+## 3. Building nodes-squaremap addon
+*See internal folder `nodes-squaremap/README.md` for more details*
+
+Requirements:
+- Java JDK 25
+- squaremap-api 1.3.11 (resolved from the papermc maven repo)
+
+Go inside `nodes-squaremap/` and run
+```
+./gradlew build
+```
+Built `nodes-squaremap-0.0.1.jar` will appear in `build/libs/`.
+
+-----------------------------------------------------------
+
+## 4. Building squaremap viewer/editor
+*See internal folder `squaremap/README.md` for more details*
+
+Requirements:
+- node.js (no Rust needed; the geometry module is a pure-JS port)
+
+Go inside `squaremap/` and run
+```
+npm install
+npm run build
+```
+Generated files appear in `build/`; copy them into
+`plugins/squaremap/web/nodes-editor/`.
 
 
 

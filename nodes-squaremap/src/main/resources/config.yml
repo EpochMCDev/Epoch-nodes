@@ -1,0 +1,80 @@
+# nodes-squaremap configuration
+# Renders the nodes plugin (plugins/nodes/*.json) state on squaremap.
+
+# Directory where the nodes plugin stores its json state files.
+# (world.json, towns.json, ports.json)
+data-directory: plugins/nodes
+
+# Interval in ticks between checks for changed json state files.
+# 100 ticks = 5 seconds.
+update-interval: 100
+
+# Which squaremap world(s) to render nodes on.
+# "auto" renders on every enabled squaremap world.
+# Otherwise a list of world names:
+#   worlds:
+#     - world
+world: auto
+
+# Copy the nodes json state files into the squaremap web directory
+# so the squaremap web editor (nodes-editor/) can fetch them.
+# Files are copied to <squaremap-web>/nodes/.
+copy-json-to-web: true
+
+# Pixel size of node/port icon markers.
+icon-size: 16
+
+# Pixel height of town/nation name text markers.
+text-size: 20
+
+# Render toggles.
+render:
+  territories: true      # territory polygon fills + borders
+  territory-border-only: false # only draw territory borders (no fill)
+  node-icons: true       # resource node icons at territory cores
+  ports: true            # port anchor icons
+  town-names: true       # town name text at town home territory
+  nation-names: false    # render nation names instead of town names at capital
+
+# Color (R,G,B) used for unowned territories.
+unowned-color: [80, 80, 80]
+
+# Fill opacity for territory polygons (0.0 - 1.0).
+fill-opacity: 0.35
+
+# Stroke (border) weight in pixels.
+stroke-weight: 2
+
+# Color (R,G,B) used for territory borders.
+border-color: [40, 40, 40]
+
+# Node icon colors. Maps a node type name (as used in world.json)
+# to an RGB color used to draw a generated icon. Unlisted node types
+# get a generic gray icon.
+icons:
+  gold: [255, 215, 0]
+  iron: [176, 176, 176]
+  diamond: [80, 220, 255]
+  redstone: [255, 60, 60]
+  emerald: [40, 220, 120]
+  coal: [60, 60, 60]
+  copper: [216, 130, 60]
+  lapis: [50, 90, 220]
+  quartz: [240, 230, 220]
+  wheat: [255, 200, 60]
+  carrot: [255, 140, 40]
+  potato: [210, 160, 90]
+  beetroot: [190, 40, 90]
+  sugar_cane: [140, 220, 90]
+  melon: [90, 200, 70]
+  pumpkin: [255, 150, 40]
+  kelp: [60, 160, 60]
+  cactus: [80, 180, 60]
+  sweet_berry: [200, 60, 60]
+  nether_wart: [180, 30, 60]
+  cow: [140, 100, 70]
+  pig: [230, 150, 160]
+  sheep: [230, 230, 230]
+  chicken: [240, 230, 220]
+  goat: [220, 200, 180]
+  rabbit: [220, 200, 180]

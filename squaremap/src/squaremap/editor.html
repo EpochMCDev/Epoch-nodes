@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>节点编辑器 (squaremap)</title>
+
+    <meta charset="utf-8" />
+    <meta name="keywords" content="minecraft, map, nodes" />
+    <meta name="description" content="Minecraft nodes editor on squaremap" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="./css/nodes-global.css" />
+
+    <!-- Nodes library -->
+    <script type="text/javascript" src="./js/nodes.js"></script>
+
+    <script type="text/javascript">
+        // create squaremap map glue, then initialize the nodes editor
+        window.MapGlue.create({})
+            .then(function (glue) {
+                window.Nodes.initialize({
+                    container: document.getElementById("nodes-container"),
+                    portTooltipContainer: document.getElementById("port-tooltip-container"),
+                    mapGlue: glue,
+                    config: "/nodes/config.json",
+                    world: "/nodes/world.json",
+                    towns: "/nodes/towns.json",
+                    ports: "/nodes/ports.json",
+                    editor: true
+                }, function () {});
+            })
+            .catch(function (err) {
+                console.error("[Nodes] Map init failed", err);
+                var el = document.getElementById("map");
+                if (el) {
+                    el.innerHTML = '<div style="color:#f88;padding:20px;font-family:sans-serif">' +
+                        "squaremap 地图初始化失败: " + err.message + "</div>";
+                }
+            });
+    </script>
+
+</head>
+<body>
+<div id="page-container">
+    <div id="map"></div>
+    <div id="nodes-container"></div>
+    <div id="port-tooltip-container"></div>
+</div>
+
+</body>
+</html>
